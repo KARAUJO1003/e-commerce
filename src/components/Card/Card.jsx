@@ -7,6 +7,9 @@ import CamisaTrinus06 from "@/assets/6.png";
 import CamisaTrinus07 from "@/assets/7.png";
 import CamisaTrinus08 from "@/assets/8.png";
 import CamisaTrinus09 from "@/assets/9.png";
+import CamisaTrinus10 from "@/assets/10.png";
+import CamisaTrinus11 from "@/assets/11.png";
+import CamisaTrinus12 from "@/assets/12.png";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import Image from "next/image";
 import { Button } from "../ui/button";
@@ -14,13 +17,13 @@ import { ShoppingCart } from "lucide-react";
 
 
 
-function CardProduct() {
+function CardProduct({props}) {
   return (
     <Card className=" w-[450px] hmin">
       <CardContent className='flex items-center justify-center'>
         <Image
-          className="hover:scale-105 transition-all"
-          src={CamisaTrinus08}
+          className="hover:scale-105 transition-all flex items-center justify-center"
+          src={CamisaTrinus11}
           alt="Imagem prudto 01"
           width={200}
           height={200}
