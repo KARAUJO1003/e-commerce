@@ -16,17 +16,17 @@ import { ShoppingCart } from "lucide-react";
 
 function CardProduct() {
   return (
-    <Card className="h-[300px] w-[350px] block">
-      <CardContent className="border-b mb-5">
+    <Card className=" w-[450px] hmin">
+      <CardContent className='flex items-center justify-center'>
         <Image
           className="hover:scale-105 transition-all"
-          src={CamisaTrinus06}
+          src={CamisaTrinus08}
           alt="Imagem prudto 01"
           width={200}
           height={200}
         />
       </CardContent>
-      <CardFooter className="flex flex-col items-start">
+      <CardFooter className="flex  items-start">
         <div className="flex items-center border justify-between rounded-full mb-5 pl-5">
           <span className="text-md font-bold text-zinc-200">Caneca trinus</span>
           <Button className="bg-blue-700 hover:bg-blue-800 rounded-full text-white ml-3 gap-2 text-md">

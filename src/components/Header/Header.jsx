@@ -25,7 +25,7 @@ export default function Header() {
             />
           </Link>
         </Button>
-        <span className="font-bold text-lg">X-COM</span>
+        <span className="font-bold text-lg">X-ORION</span>
         <nav className="text-zinc-500  font-semibold gap-3 flex ml-5 text-sm">
           <Link
             className="hover:border-b hover:text-black dark:hover:text-zinc-50"
@@ -55,7 +55,7 @@ export default function Header() {
         />
         <Button
           variant="ghost"
-          className="hover:bg-transparent text-zinc-600 hover:text-zinc-950 dark:hover:text-zinc-300"
+          className="hover:bg-transparent text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-300"
         >
           <Search />
         </Button>
