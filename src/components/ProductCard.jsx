@@ -10,23 +10,22 @@ import CamisaTrinus09 from "@/assets/9.png";
 import CamisaTrinus10 from "@/assets/10.png";
 import CamisaTrinus11 from "@/assets/11.png";
 import CamisaTrinus12 from "@/assets/12.png";
-import { Card, CardContent, CardFooter } from "../ui/card";
+import { Card, CardContent, CardFooter } from "./ui/card";
 import Image from "next/image";
-import { Button } from "../ui/button";
+import { Button } from "./ui/button";
 import { ShoppingCart } from "lucide-react";
 
 
 
-function CardProduct({props}) {
+function CardProduct({src, ...props}) {
   return (
-    <Card className="h-min w-80 border hover:border-blue-700">
+    <Card className="h-min w-min flex flex-col justify-between border hover:border-blue-700">
       <CardContent className='flex items-center justify-center'>
         <Image
           className="hover:scale-105 transition-all mt-3 flex items-center justify-center"
-          src={CamisaTrinus11}
+          src={src}
           alt="Imagem prudto 01"
-          width={100}
-          height={100}
+          
         />
       </CardContent>
       <CardFooter className="flex  items-start">
