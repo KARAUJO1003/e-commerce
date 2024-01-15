@@ -60,7 +60,7 @@ export default function Home() {
       <div className="grid grid-flow-col-dense">
         <SideBar className="fixed left-0 top-0 " />
         <ScrollArea>
-          <div className="bg-blue-700 h-auto py-3 flex items-center mt-20 justify-center relative">
+          <div className=" h-auto py-3 flex items-center mt-20 justify-center relative">
             <Carousel
               opts={{
                 align: "center",
