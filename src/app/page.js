@@ -77,7 +77,7 @@ export default function Home() {
               </div>
               <ScrollBar orientation="horizontal" />
             </ScrollArea>
-            <div className="col-span-full flex  mt-5 justify-center">
+            <div className="col-span-full flex flex-col mt-5 justify-center">
               <ScrollArea className=" whitespace-nowrap rounded-md w-full ">
                 <div className="pb-3 flex gap-5 p-3 border w-full">
                   <span className="rounded-md p-6 px-10 bg-blue-700 flex items-center justify-center gap-2">
@@ -125,8 +125,9 @@ export default function Home() {
                   ref={(ref) => setScrollRef(ref)}
                   orientation="horizontal"
                 />
+              </ScrollArea>
                 <div className="my-5 flex flex-col gap-3">
-                  <div className="flex items-center bg-zinc-900 border shadow-md w-min rounded-lg overflow-hidden gap-3">
+                  <div className="flex items-center bg-zinc-900 border shadow-md max-w-80 rounded-lg overflow-hidden gap-3">
                     <div className=' w-24 h-24 bg-zinc-800 flex items-center justify-center'>
                       <Percent className="text-zinc-500" size={48}/>
                     </div>
@@ -135,7 +136,7 @@ export default function Home() {
                       <CardDescription>Encontre o que você procura</CardDescription>
                     </div>
                   </div>
-                  <div className="flex items-center bg-zinc-900 border shadow-md w-min rounded-lg overflow-hidden gap-3">
+                  <div className="flex items-center bg-zinc-900 border shadow-md max-w-80 rounded-lg overflow-hidden gap-3">
                     <div className=' w-24 h-24 bg-zinc-800 flex items-center justify-center'>
                       <Percent className="text-zinc-500" size={48}/>
                     </div>
@@ -144,7 +145,7 @@ export default function Home() {
                       <CardDescription>Encontre o que você procura</CardDescription>
                     </div>
                   </div>
-                  <div className="flex items-center bg-zinc-900 border shadow-md w-min rounded-lg overflow-hidden gap-3">
+                  <div className="flex items-center bg-zinc-900 border shadow-md max-w-80 rounded-lg overflow-hidden gap-3">
                     <div className=' w-24 h-24 bg-zinc-800 flex items-center justify-center'>
                       <Percent className="text-zinc-500" size={48}/>
                     </div>
@@ -154,7 +155,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </ScrollArea>
             </div>
             <HomeFooter />
           </div>
