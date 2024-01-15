@@ -19,7 +19,7 @@ import { ShoppingCart } from "lucide-react";
 
 function CardProduct({src, ...props}) {
   return (
-    <Card className="h-min w-min flex flex-col justify-between border hover:border-blue-700">
+    <Card className="h-min w-min flex flex-col justify-between bg-zinc-900 border hover:border-blue-700">
       <CardContent className='flex items-center justify-center'>
         <Image
           className="hover:scale-105 transition-all mt-3 flex items-center justify-center"

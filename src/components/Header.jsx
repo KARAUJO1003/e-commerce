@@ -57,15 +57,18 @@ export default function Header() {
         
         <Button
           variant="ghost"
-          className="hover:bg-transparent text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-300"
+          className="hover:bg-transparent px-2 text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-300"
         >
           <Search />
         </Button>
       </div>
 
-      <div className="w-1/3 flex justify-end">
+      <div className="w-1/3 flex justify-end  gap-1">
         <ModeToggle />
-        <Button variant={'ghost'}>
+        <Button 
+        variant={'ghost'}
+        className="px-2"
+        >
           <ShoppingCart />
         </Button>
       </div>

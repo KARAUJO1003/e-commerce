@@ -24,10 +24,19 @@ import {
   ShoppingBag,
   ShoppingCart,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import SideBar from "@/components/SideBar";
 import HomeFooter from "@/components/HomeFooter";
 import { useEffect, useState } from "react";
+import RecentCategoryCard from "@/components/RecentCategoryCard";
 
 export default function Home() {
   const [scrollRef, setScrollRef] = useState(null);
@@ -51,8 +60,35 @@ export default function Home() {
       <div className="grid grid-flow-col-dense">
         <SideBar className="fixed left-0 top-0 " />
         <ScrollArea>
-          <div className="bg-blue-700 h-[270px] flex items-center mt-20 justify-center">
-            <h1 className="text-3xl"> Aproveite a super oferta </h1>
+          <div className="bg-blue-700 h-auto py-3 flex items-center mt-20 justify-center relative">
+            <Carousel
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              className="w-full max-w-full"
+            >
+              <CarouselContent>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/1"
+                  >
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex aspect-video items-center justify-center p-6">
+                          <span className="text-3xl font-semibold">
+                            {index + 1}
+                          </span>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute top-1/2 left-3" />
+              <CarouselNext className="absolute top-1/2 right-3" />
+            </Carousel>
           </div>
           <div className="w-full max-h-screen grid grid-cols-4  gap-5 py-5 px-5 ">
             <ScrollArea className=" whitespace-nowrap rounded-md col-span-full">
@@ -126,35 +162,15 @@ export default function Home() {
                   orientation="horizontal"
                 />
               </ScrollArea>
-                <div className="my-5 flex flex-col gap-3">
-                  <div className="flex items-center bg-zinc-900 border shadow-md max-w-80 rounded-lg overflow-hidden gap-3">
-                    <div className=' w-24 h-24 bg-zinc-800 flex items-center justify-center'>
-                      <Percent className="text-zinc-500" size={48}/>
-                    </div>
-                    <div className="pr-5">
-                      <CardTitle>Automoveis</CardTitle>
-                      <CardDescription>Encontre o que você procura</CardDescription>
-                    </div>
-                  </div>
-                  <div className="flex items-center bg-zinc-900 border shadow-md max-w-80 rounded-lg overflow-hidden gap-3">
-                    <div className=' w-24 h-24 bg-zinc-800 flex items-center justify-center'>
-                      <Percent className="text-zinc-500" size={48}/>
-                    </div>
-                    <div className="pr-5">
-                      <CardTitle>Eletrodomesticos</CardTitle>
-                      <CardDescription>Encontre o que você procura</CardDescription>
-                    </div>
-                  </div>
-                  <div className="flex items-center bg-zinc-900 border shadow-md max-w-80 rounded-lg overflow-hidden gap-3">
-                    <div className=' w-24 h-24 bg-zinc-800 flex items-center justify-center'>
-                      <Percent className="text-zinc-500" size={48}/>
-                    </div>
-                    <div className="pr-5">
-                      <CardTitle>Casa</CardTitle>
-                      <CardDescription>Encontre o que você procura</CardDescription>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-zinc-800 h-80 w-full rounded-md"></div>
+              <div className="my-5 grid grid-cols-3 gap-3">
+                <RecentCategoryCard titulo={"titulo"} descriçao={"algo"} />
+                <RecentCategoryCard titulo={"titulo"} descriçao={"algo"} />
+                <RecentCategoryCard titulo={"titulo"} descriçao={"algo"} />
+                <RecentCategoryCard titulo={"titulo"} descriçao={"algo"} />
+                <RecentCategoryCard titulo={"titulo"} descriçao={"algo"} />
+                <RecentCategoryCard titulo={"titulo"} descriçao={"algo"} />
+              </div>
             </div>
             <HomeFooter />
           </div>
