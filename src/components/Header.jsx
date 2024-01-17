@@ -20,7 +20,7 @@ export default function Header() {
           <Link className="p-0 m-0" href={"/"}>
             <Image
               alt="Minha logo"
-              src={theme === "dark" ? LogoBranca : LogoPreta}
+              src={ theme === "dark" ? LogoBranca : LogoPreta}
               height={200}
               width={200}
             />

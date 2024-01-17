@@ -19,7 +19,7 @@ import { ShoppingCart } from "lucide-react";
 
 function CardProduct({src, ...props}) {
   return (
-    <Card className="h-min w-min flex flex-col justify-between bg-zinc-900 border hover:border-blue-700">
+    <Card className="h-min w-min flex flex-col justify-between shadow-lg bg-zinc-200 dark:bg-zinc-950 border hover:border-blue-700">
       <CardContent className='flex items-center justify-center'>
         <Image
           className="hover:scale-105 transition-all mt-3 flex items-center justify-center"
@@ -30,7 +30,7 @@ function CardProduct({src, ...props}) {
       </CardContent>
       <CardFooter className="flex  items-start">
         <div className="flex items-center border justify-between rounded-full mb-5 pl-5">
-          <span className="text-xs font-bold text-zinc-200">Caneca trinus</span>
+          <span className="text-xs font-bold text-zinc-700 dark:text-zinc-200">Caneca trinus</span>
           <Button className="bg-blue-700 hover:bg-blue-800 rounded-full text-white ml-3 gap-2 text-xs">
             <ShoppingCart size={15} />
             R$ 79,90
